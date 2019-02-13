@@ -4,6 +4,7 @@ docker搭建nginx+PHP环境(包括各种PHP扩展)
 ### 1. 如何使用
 ```
 git clone git@github.com:weiwenwang/NginxPhpDocker.git
+cd NginxPhpDocker
 ```
 
 ```
