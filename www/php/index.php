@@ -1,4 +1,4 @@
 <?php
-echo date("Y-m-d H:i:s") . "sdf";
+echo date("Y-m-d H:i:s") . " https://github.com/weiwenwang/NginxPhpDocker";
 phpinfo();
  ?>
