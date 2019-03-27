@@ -15,7 +15,7 @@ docker run -it -d \
 --name myphp \
 -v $PWD/www/php:/www/php \
 --privileged=true \
-php:7.2-fpm
+wangnan188/nginx-php-docker:v7.2-v1
 ```
 
 #### 1.3 启动nginx容器
@@ -32,15 +32,15 @@ docker run -it -p 80:80 -d \
 
 ### 2. php包含了哪些extension呢?
 
-extension | remark| - | type | extension | remark
----|---|--|-- |--|--
-Core | YES| |-|redis|YES
-ctype | YES|-|-|gd|YES
-curl | YES|-|-|xdebug|YES
-date | YES|-|-|mongodb|YES
-dom | YES|-|-|swoole|YES
-fileinfo| YES|-|-|memcached|YES
-filter | YES|-|-|memcache|NO
+extension | status| remark |- | extension | status|remark |- |
+---|---|--|-- |--|--|--|--
+Core | YES|- |-|redis|YES|-|-
+ctype | YES|-|-|gd|YES|-|-
+curl | YES|-|-|xdebug|YES|-|-
+date | YES|-|-|mongodb|YES|-|-
+dom | YES|-|-|swoole|YES|-|-
+fileinfo| YES|-|-|memcached|YES|-|-
+filter | YES|-|-|memcache|NO|-|-
 ftp | YES|-|-||
 hash | YES|-|-||
 iconv | YES|-|-||
@@ -49,21 +49,21 @@ libxml | YES|-|-||
 mbstring | YES|-|-||
 mysqlnd | YES|-|-||
 openssl | YES|-|-||
-pcre| YES
-PDO| YES
-pdo_sqlite| YES
-Phar| YES
-posix | YES
-readline | YES
-Reflection | YES
-session | YES
-SimpleXML | YES
-sodium | YES
-SPL | YES
-sqlite3 | YES
-standard | YES
-tokenizer | YES
-xml | YES
-xmlreader | YES
-xmlwriter | YES
-zlib | YES
+pcre| YES|-|-||
+PDO| YES|-|-||
+pdo_sqlite| YES|-|-||
+Phar| YES|-|-||
+posix | YES|-|-||
+readline | YES|-|-||
+Reflection | YES|-|-||
+session | YES|-|-||
+SimpleXML | YES|-|-||
+sodium | YES|-|-||
+SPL | YES|-|-||
+sqlite3 | YES|-|-||
+standard | YES|-|-||
+tokenizer | YES|-|-||
+xml | YES|-|-||
+xmlreader | YES|-|-||
+xmlwriter | YES|-|-||
+zlib | YES|-|-||
