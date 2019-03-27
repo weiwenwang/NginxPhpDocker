@@ -26,13 +26,20 @@ docker run -it -p 80:80 -d \
 -v $PWD/nginx-conf/nginx.conf:/etc/nginx/nginx.conf \
 --link=myphp:myphp_alias \
 -v $PWD/www/html:/www/html \
+-v $PWD/www/example:/www/example \
 --privileged=true \
 --name=mynginx nginx
 ```
 
+#### 1.4 注意事项， 非常重要
+
+- 1.2, 1.3的两个指令必须在NginxPhpDocker目录下执行
+- PHP代码的文件夹, 必须挂在到PHP容器里面, 有小伙伴使用的时候挂到nginx容器里面了, nginx和PHP俩容器是隔离的, 通过fastcgi通信, 挂在错了, php就报找不到文件
+
+
 ### 3. 如何把现有的项目跑起来呢？
 
-这里我举例个例子， 假如我们现在的项目就是thinkphp框架写的
+这里我举例个例子， 假如我们现在的项目就是thinkphp框架写的, 代码在www/example/thinkphp_3.2.3_full, 配置文件在nginx-conf/conf.d/example-thinkphp.conf, 这就是单纯的nginx配置问题了
 
 
 ### 2. wangnan188/nginx-php-docker php镜像包含了哪些extension呢?
