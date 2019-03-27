@@ -20,15 +20,15 @@ docker run -it -p 80:80 -d -v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
 
 ### 2. php extension
 
-extension | remark| exist | type | extension | remark
+extension | remark| - | type | extension | remark
 ---|---|--|-- |--|--
-Core | YES|-|-|redis|sdf
-ctype | YES|-|-|gd|sdf
-curl | YES|-|-|xdebug|sdf
-date | YES|-|-|mongodb|sdf
-dom | YES|-|-|swoole|sdf
-fileinfo| YES|-|-||
-filter | YES|-|-||
+Core | YES| |-|redis|YES
+ctype | YES|-|-|gd|YES
+curl | YES|-|-|xdebug|YES
+date | YES|-|-|mongodb|YES
+dom | YES|-|-|swoole|YES
+fileinfo| YES|-|-|memcached|YES
+filter | YES|-|-|memcache|NO
 ftp | YES|-|-||
 hash | YES|-|-||
 iconv | YES|-|-||
