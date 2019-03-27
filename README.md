@@ -1,7 +1,7 @@
 # NginxPhpDocker
 基于docker, 快速搭建Nginx+Php开发环境(包括大部分常用PHP扩展)
 
-### 1. 如何使用
+### 1. 如何使用呢?
 
 #### 1.1 cloen code
 ```
@@ -14,6 +14,7 @@ cd NginxPhpDocker
 docker run -it -d \
 --name myphp \
 -v $PWD/www/php:/www/php \
+-v $PWD/www/example:/www/example \
 --privileged=true \
 wangnan188/nginx-php-docker:v7.2-v1
 ```
@@ -29,8 +30,12 @@ docker run -it -p 80:80 -d \
 --name=mynginx nginx
 ```
 
+### 3. 如何把现有的项目跑起来呢？
 
-### 2. php包含了哪些extension呢?
+这里我举例个例子， 假如我们现在的项目就是thinkphp框架写的
+
+
+### 2. wangnan188/nginx-php-docker php镜像包含了哪些extension呢?
 
 extension | status| remark |- | extension | status|remark |- |
 ---|---|--|-- |--|--|--|--
