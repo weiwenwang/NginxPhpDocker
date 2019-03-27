@@ -20,16 +20,38 @@ docker run -it -p 80:80 -d -v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
 
 ### 2. php extension
 
-name | header 2 | exist | type
+extension | header 2| exist | type
 ---|---|--|--
-xcache | row 1 col 2
-swoole | row 2 col 2
-mongo | row 2 col 2
-mcrypt | row 2 col 2
-mbstring | row 2 col 2|1| origin
-redis | row 2 col 2|1| php7.2 install extension
-gd | row 2 col 2 | sdaf| docker-php-ext-install gd
-curl |jkl
-memcache |jkl
-mysqli |jkl|sd|docker-php-ext-install mysqli 
-iconv|jkl|sd|docker-php-ext-install mysqli
+Core | row 1 col 2
+ctype | row 2 col 2
+curl | row 2 col 2
+date | row 2 col 2
+dom | row 2 col 2
+fileinfo| row 2 col 2
+filter | row 2 col 2
+ftp | row 2 col 2
+hash | row 2 col 2
+iconv | row 2 col 2
+json | row 2 col 2
+libxml | row 2 col 2
+mbstring | row 2 col 2
+mysqlnd | row 2 col 2
+openssl | row 2 col 2
+pcre| row 2 col 2
+PDO| row 2 col 2
+pdo_sqlite| row 2 col 2
+Phar| row 2 col 2
+posix | row 2 col 2
+readline | row 2 col 2
+Reflection | row 2 col 2
+session | row 2 col 2
+SimpleXML | row 2 col 2
+sodium | row 2 col 2
+SPL | row 2 col 2
+sqlite3 | row 2 col 2
+standard | row 2 col 2
+tokenizer | row 2 col 2
+xml | row 2 col 2
+xmlreader | row 2 col 2
+xmlwriter | row 2 col 2
+zlib | row 2 col 2
