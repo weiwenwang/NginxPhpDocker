@@ -1,5 +1,5 @@
 # NginxPhpDocker
-基于docker, 快速搭建Nginx+Php开发环境(包括大部分常用PHP扩展)
+基于docker, 快速搭建Nginx+Php本地开发环境(包括大部分常用PHP扩展)
 
 ### 1. 如何使用呢?
 
@@ -34,7 +34,7 @@ docker run -it -p 80:80 -d \
 #### 1.4 注意事项， 非常重要
 
 - 1.2, 1.3的两个指令必须在NginxPhpDocker目录下执行
-- PHP代码的文件夹, 必须挂在到PHP容器里面, 有小伙伴使用的时候挂到nginx容器里面了, nginx和PHP俩容器是隔离的, php只会按地址在他们自己的容器里面找文件, 和nginx只是通过fastcgi通信
+- PHP代码的文件夹, 必须挂在到PHP容器里面, 有小伙伴使用的时候挂到nginx容器里面了, nginx和PHP俩容器是隔离的, php只会按地址在他们自己的容器里面找文件, 和nginx只是通过fastcgi通信, nginx告诉PHP文件地址, PHP在自己的容器去找对应的文件
 
 
 ### 3. 如何把现有的项目跑起来呢？
@@ -46,7 +46,7 @@ docker run -it -p 80:80 -d \
   浏览器访问: http://thinkphp-full.com/index.php?c=index&a=index
 
 
-### 2. wangnan188/nginx-php-docker php镜像包含了哪些extension呢?
+### 4. wangnan188/nginx-php-docker php镜像包含了哪些extension呢?
 
 extension | status| remark |- | extension | status|remark |- |
 ---|---|--|-- |--|--|--|--
@@ -83,3 +83,7 @@ xml | YES|-|-||
 xmlreader | YES|-|-||
 xmlwriter | YES|-|-||
 zlib | YES|-|-||
+
+### 5. 其他
+
+感谢你看到这里, 有问题, email我(wangweiwen200@gmail.com)
