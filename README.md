@@ -1,24 +1,36 @@
 # NginxPhpDocker
-docker搭建nginx+PHP环境(包括各种PHP扩展)
+基于docker, 快速搭建Nginx+Php开发环境(包括大部分常用PHP扩展)
 
 ### 1. 如何使用
+
+#### 1.1 cloen code
 ```
 git clone git@github.com:weiwenwang/NginxPhpDocker.git
 cd NginxPhpDocker
 ```
 
+#### 1.2 启动php容器
 ```
-docker run -it  --name  myphp -v $PWD/www/php:/www/php  --privileged=true -d php:7.2-fpm
+docker run -it -d \
+--name myphp \
+-v $PWD/www/php:/www/php \
+--privileged=true \
+php:7.2-fpm
 ```
+
+#### 1.3 启动nginx容器
 ```
-docker run -it -p 80:80 -d -v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
+docker run -it -p 80:80 -d \
+-v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
 -v $PWD/nginx-conf/nginx.conf:/etc/nginx/nginx.conf \
 --link=myphp:myphp_alias \
--v $PWD/www/html:/www/html  --privileged=true --name=mynginx nginx
+-v $PWD/www/html:/www/html \
+--privileged=true \
+--name=mynginx nginx
 ```
 
 
-### 2. php extension
+### 2. php包含了哪些extension呢?
 
 extension | remark| - | type | extension | remark
 ---|---|--|-- |--|--
