@@ -20,38 +20,38 @@ docker run -it -p 80:80 -d -v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
 
 ### 2. php extension
 
-extension | header 2| exist | type
----|---|--|--
-Core | row 1 col 2
-ctype | row 2 col 2
-curl | row 2 col 2
-date | row 2 col 2
-dom | row 2 col 2
-fileinfo| row 2 col 2
-filter | row 2 col 2
-ftp | row 2 col 2
-hash | row 2 col 2
-iconv | row 2 col 2
-json | row 2 col 2
-libxml | row 2 col 2
-mbstring | row 2 col 2
-mysqlnd | row 2 col 2
-openssl | row 2 col 2
-pcre| row 2 col 2
-PDO| row 2 col 2
-pdo_sqlite| row 2 col 2
-Phar| row 2 col 2
-posix | row 2 col 2
-readline | row 2 col 2
-Reflection | row 2 col 2
-session | row 2 col 2
-SimpleXML | row 2 col 2
-sodium | row 2 col 2
-SPL | row 2 col 2
-sqlite3 | row 2 col 2
-standard | row 2 col 2
-tokenizer | row 2 col 2
-xml | row 2 col 2
-xmlreader | row 2 col 2
-xmlwriter | row 2 col 2
-zlib | row 2 col 2
+extension | remark| exist | type | extension | remark
+---|---|--|-- |--|--
+Core | YES|-|-|redis|sdf
+ctype | YES|-|-|gd|sdf
+curl | YES|-|-|xdebug|sdf
+date | YES|-|-|mongodb|sdf
+dom | YES|-|-|swoole|sdf
+fileinfo| YES|-|-||
+filter | YES|-|-||
+ftp | YES|-|-||
+hash | YES|-|-||
+iconv | YES|-|-||
+json | YES|-|-||
+libxml | YES|-|-||
+mbstring | YES|-|-||
+mysqlnd | YES|-|-||
+openssl | YES|-|-||
+pcre| YES
+PDO| YES
+pdo_sqlite| YES
+Phar| YES
+posix | YES
+readline | YES
+Reflection | YES
+session | YES
+SimpleXML | YES
+sodium | YES
+SPL | YES
+sqlite3 | YES
+standard | YES
+tokenizer | YES
+xml | YES
+xmlreader | YES
+xmlwriter | YES
+zlib | YES
