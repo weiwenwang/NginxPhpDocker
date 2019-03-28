@@ -3,7 +3,7 @@
 
 ### 1. 如何使用呢?
 
-#### 1.1 cloen code
+#### 1.1 download code
 ```
 git clone git@github.com:weiwenwang/NginxPhpDocker.git
 cd NginxPhpDocker
