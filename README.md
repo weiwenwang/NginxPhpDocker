@@ -36,6 +36,10 @@ docker run -it -p 80:80 -d \
 - 1.2, 1.3的两个指令必须在NginxPhpDocker目录下执行
 - PHP代码的文件夹, 必须挂在到PHP容器里面, 有小伙伴使用的时候挂到nginx容器里面了, nginx和PHP俩容器是隔离的, php只会按地址在他们自己的容器里面找文件, 和nginx只是通过fastcgi通信, nginx告诉php用户请求的文件地址, php在自己的容器去找对应的文件
 
+#### 1.5 执行1.2、1.3之后效果是什么样子的呢?
+![446601B2-F933-40F1-8588-AC9F3F26E17E.png](https://i.loli.net/2019/03/28/5c9c36453f75e.png)
+![602C7C2D-5793-4805-BE64-1B8EDA958CB0.png](https://i.loli.net/2019/03/28/5c9c36452cb09.png)
+![2240481F-4CC0-48C8-B6BA-398A26B8A938.png](https://i.loli.net/2019/03/28/5c9c36454b755.png)
 
 ### 3. 如何把现有的项目跑起来呢？
 
@@ -44,7 +48,8 @@ docker run -it -p 80:80 -d \
   第二步: 添加配置文件nginx-conf/conf.d/example-thinkphp.conf, 剩下的就是单纯的nginx配置问题了.
   本地做一个host绑定: "127.0.0.1 thinkphp-full.com"
   浏览器访问: http://thinkphp-full.com/index.php?c=index&a=index
-
+  
+![A40B8438-28B1-4023-BC42-FE28E435F724.png](https://i.loli.net/2019/03/28/5c9c389f4a322.png)
 
 ### 4. wangnan188/nginx-php-docker现在包含了哪些extension呢?
 
