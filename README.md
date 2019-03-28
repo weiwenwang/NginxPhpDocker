@@ -46,7 +46,7 @@ docker run -it -p 80:80 -d \
   浏览器访问: http://thinkphp-full.com/index.php?c=index&a=index
 
 
-### 4. wangnan188/nginx-php-docker php镜像包含了哪些extension呢?
+### 4. wangnan188/nginx-php-docker现在包含了哪些extension呢?
 
 extension | status| remark |- | extension | status|remark |- |
 ---|---|--|-- |--|--|--|--
