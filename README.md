@@ -1,5 +1,5 @@
 # NginxPhpDocker
-基于docker, 快速搭建Nginx+Php本地开发环境(已含常用PHP扩展), nginx、php配置文件和php工程代码都在宿主机上, 方面修改
+基于docker, 快速搭建Nginx+Php本地开发环境(已含常用PHP扩展), nginx、php配置文件和php工程代码都在宿主机上, 方便修改
 
 ### 1. 如何使用呢?
 
