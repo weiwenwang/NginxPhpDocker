@@ -1,5 +1,5 @@
 # NginxPhpDocker
-基于docker, 快速搭建Nginx+Php本地开发环境(已含常用PHP扩展), nginx、php配置文件和php工程代码都在宿主机上, 方便修改
+基于docker, 快速搭建Nginx+Php本地开发环境(已含常用PHP扩展), nginx、php配置文件,日志文件和php工程代码都在宿主机上, 方便修改
 
 ### 1. 如何使用呢?
 
@@ -21,12 +21,17 @@ wangnan188/nginx-php-docker:v7.2-v1
 
 #### 1.3 启动nginx容器
 ```
-docker run -it -p 80:80 -d \
+docker run -it -d \
+-p 80:80 \
+-p 443:443 \
 -v $PWD/nginx-conf/conf.d:/etc/nginx/conf.d \
 -v $PWD/nginx-conf/nginx.conf:/etc/nginx/nginx.conf \
---link=myphp:myphp_alias \
 -v $PWD/www/html:/www/html \
 -v $PWD/www/example:/www/example \
+-v $PWD/ssl/server.crt:/etc/nginx/ssl/server.crt \
+-v $PWD/ssl/server.key:/etc/nginx/ssl/server.key \
+-v $PWD/log/nginx:/var/log/nginx/ \
+--link=myphp:myphp_alias \
 --privileged=true \
 --name=mynginx nginx
 ```
@@ -48,7 +53,7 @@ docker run -it -p 80:80 -d \
   第二步: 添加配置文件nginx-conf/conf.d/example-thinkphp.conf, 剩下的就是单纯的nginx配置问题了.
   本地做一个host绑定: "127.0.0.1 thinkphp-full.com"
   浏览器访问: http://thinkphp-full.com/index.php?c=index&a=index
-  
+
 ![A40B8438-28B1-4023-BC42-FE28E435F724.png](https://i.loli.net/2019/03/28/5c9c389f4a322.png)
 
 ### 4. wangnan188/nginx-php-docker现在包含了哪些extension呢?
