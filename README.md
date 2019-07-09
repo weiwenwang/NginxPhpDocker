@@ -16,7 +16,7 @@ docker run -it -d \
 -v $PWD/www/php:/www/php \
 -v $PWD/www/example:/www/example \
 --privileged=true \
-wangnan188/nginx-php-docker:v7.2-v1
+wangnan188/nginx-php-docker:v7.2-v2
 ```
 
 #### 1.3 启动nginx容器
