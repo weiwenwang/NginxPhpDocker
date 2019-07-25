@@ -15,6 +15,8 @@ docker run -it -d \
 --name myphp \
 -v $PWD/www/php:/www/php \
 -v $PWD/www/example:/www/example \
+-v $PWD/php-fpm-conf:/usr/local/etc/php-fpm.d \
+-v $PWD/php-conf:/usr/local/etc/php \
 --privileged=true \
 wangnan188/nginx-php-docker:v7.2-v2
 ```
