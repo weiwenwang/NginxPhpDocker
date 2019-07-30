@@ -19,7 +19,7 @@ docker run -it -d \
 -v $PWD/php-conf:/usr/local/etc/php \
 -v $PWD/log/php:/var/log/php/ \
 --privileged=true \
-wangnan188/nginx-php-docker:v7.2-v2
+wangnan188/nginx-php-docker:v7.2-v3
 ```
 
 #### 1.3 启动nginx容器
@@ -36,7 +36,8 @@ docker run -it -d \
 -v $PWD/log/nginx:/var/log/nginx/ \
 --link=myphp:myphp_alias \
 --privileged=true \
---name=mynginx nginx
+--name=mynginx \
+nginx
 ```
 
 #### 1.4 注意事项， 非常重要
