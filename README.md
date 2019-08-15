@@ -15,6 +15,7 @@ docker run -it -d \
 --name myphp \
 -v $PWD/www/php:/www/php \
 -v $PWD/www/example:/www/example \
+-v $PWD/../Apps:/www/Apps \
 -v $PWD/php-fpm-conf:/usr/local/etc/php-fpm.d \
 -v $PWD/php-conf:/usr/local/etc/php \
 -v $PWD/log/php:/var/log/php/ \
@@ -31,6 +32,7 @@ docker run -it -d \
 -v $PWD/nginx-conf/nginx.conf:/etc/nginx/nginx.conf \
 -v $PWD/www/html:/www/html \
 -v $PWD/www/example:/www/example \
+-v $PWD/../Apps:/www/Apps \
 -v $PWD/ssl/server.crt:/etc/nginx/ssl/server.crt \
 -v $PWD/ssl/server.key:/etc/nginx/ssl/server.key \
 -v $PWD/log/nginx:/var/log/nginx/ \
@@ -44,7 +46,7 @@ nginx
 
 - 1.2, 1.3的两个指令必须在NginxPhpDocker目录下执行
 - PHP代码的文件夹, 必须挂在到PHP容器里面, 有小伙伴使用的时候挂到nginx容器里面了, nginx和PHP俩容器是隔离的, php只会按地址在他们自己的容器里面找文件, 和nginx只是通过fastcgi通信, nginx告诉php用户请求的文件地址, php在自己的容器去找对应的文件
-
+- 这边我在NginxPhpDocker平行的位置放了一个Apps(Apps/nieta-admin), 里面放我们开发的一个个项目, 每个项目一个conf文件, 放在NginxPhpDocker/nginx-conf/conf.d/下面(authorApiNieta-local.conf)
 #### 1.5 执行1.2、1.3之后效果是什么样子的呢?
 ![446601B2-F933-40F1-8588-AC9F3F26E17E.png](https://i.loli.net/2019/03/28/5c9c36453f75e.png)
 ![602C7C2D-5793-4805-BE64-1B8EDA958CB0.png](https://i.loli.net/2019/03/28/5c9c36452cb09.png)
